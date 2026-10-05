@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Wisata Gunung Rinjani</title>
+  <meta name="description" content="Hubungi kami dan pesan paket pendakian Gunung Rinjani melalui formulir atau kontak langsung.">
+  <link rel="icon" href="Logo Gunung Rinjani.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="atas">
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="logo" href="index.html"><i class="fa-solid fa-mountain"></i> Rinjani</a>
+      <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="section">
+      <h1>Hubungi Kami</h1>
+      <address class="info">
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:gustidimas982@gmail.com">gustidimas982@gmail.com</a></p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+6281336011353">+62 813-3601-1353</a></p>
+        <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/dimeshia_/" target="_blank" rel="noopener">Instagram kami</a></p>
+      </address>
+      <p><a href="#atas">&uarr; Kembali ke atas</a></p>
+    </section>
+
+    <section class="section">
+      <h2>Formulir Pemesanan</h2>
+      <form action="#" method="post">
+        <div class="field"><label for="nama">Nama lengkap</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama Anda" required></div>
+        <div class="field"><label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com" required></div>
+        <div class="field"><label for="telp">Nomor telepon</label>
+          <input type="tel" id="telp" name="telp" placeholder="0812xxxxxxx"></div>
+        <div class="field"><label for="tanggal">Tanggal pendakian</label>
+          <input type="date" id="tanggal" name="tanggal" required></div>
+        <div class="field"><label for="jumlah">Jumlah peserta</label>
+          <input type="number" id="jumlah" name="jumlah" min="1" max="20" value="1"></div>
+        <div class="field"><label for="paket">Paket</label>
+          <select id="paket" name="paket">
+            <option value="sembalun">Sembalun Ringkas</option>
+            <option value="segara">Segara Anak</option>
+            <option value="full">Full Trip</option>
+          </select></div>
+        <fieldset>
+          <legend>Pengalaman mendaki</legend>
+          <input type="radio" id="pemula" name="level" value="pemula" checked><label for="pemula">Pemula</label>
+          <input type="radio" id="mahir" name="level" value="mahir"><label for="mahir">Mahir</label>
+        </fieldset>
+        <div class="field check"><input type="checkbox" id="setuju" name="setuju" required>
+          <label for="setuju">Saya menyetujui syarat &amp; ketentuan</label></div>
+        <div class="field"><label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda"></textarea></div>
+        <div class="actions">
+          <button type="submit" class="btn">Kirim</button>
+          <button type="reset" class="btn btn-alt">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Lokasi</h2>
+      <div class="video-wrap">
+        <iframe src="https://www.google.com/maps?q=Gunung+Rinjani&amp;output=embed" title="Peta Gunung Rinjani" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p><small>&copy; 2026 Wisata Gunung Rinjani. Lombok, Nusa Tenggara Barat.</small></p>
+  </footer>
+</body>
+</html>

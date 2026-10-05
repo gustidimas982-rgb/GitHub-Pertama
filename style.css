@@ -1,0 +1,123 @@
+/* ===== Reset & Variabel ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --hijau: #1b4332;
+  --hijau-muda: hsl(150, 40%, 40%);
+  --oranye: #e76f51;
+  --krem: #f8f5ee;
+  --teks: #222;
+  --bayangan: rgba(0, 0, 0, 0.15);
+}
+html { scroll-behavior: smooth; }
+body { font-family: "Segoe UI", Arial, sans-serif; line-height: 1.6; color: var(--teks); background: var(--krem); }
+img, iframe, video { max-width: 100%; display: block; }
+a { color: var(--hijau-muda); }
+h1, h2, h3 { line-height: 1.25; }
+h2 { margin-bottom: 1rem; color: var(--hijau); text-transform: uppercase; letter-spacing: 1px; font-size: 1.3rem; }
+p { margin-bottom: 0.8rem; }
+::selection { background: var(--oranye); color: #fff; }
+
+/* ===== Navbar ===== */
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--hijau); }
+.navbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; max-width: 1100px; margin: 0 auto; }
+.logo { color: #fff; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.menu { display: flex; gap: 0.25rem; list-style: none; }
+.menu a { display: block; padding: 0.7rem 0.9rem; color: #fff; text-decoration: none; border-radius: 6px; }
+.menu a:hover, .menu a.active { background: var(--oranye); }
+
+/* ===== Hero ===== */
+.hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem 1rem; color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(27, 67, 50, 0.7)), url("BG\ Rinjani.jpg") center / cover no-repeat;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); }
+.hero h1 { font-size: 2rem; margin-bottom: 1rem; }
+.hero p { max-width: 40rem; }
+
+/* ===== Tombol ===== */
+.btn { display: inline-block; padding: 0.8rem 1.5rem; background: var(--oranye); color: #fff; border: 0; border-radius: 30px; font-size: 1rem; text-decoration: none; text-shadow: none; cursor: pointer; }
+.btn:hover { background: #c95a3f; }
+.btn:active { transform: scale(0.96); }
+.btn-alt { background: #6c757d; }
+
+/* ===== Section umum ===== */
+.section { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+.section > h1 { color: var(--hijau); margin-bottom: 1rem; }
+#tentang p:first-of-type::first-letter { font-size: 2.2rem; font-weight: 700; color: var(--oranye); }
+hr { margin: 1rem 0; border: 0; border-top: 2px dashed var(--hijau-muda); }
+mark { background: #ffe08a; padding: 0 0.2em; }
+
+/* ===== Kartu ===== */
+.cards { display: flex; flex-wrap: wrap; gap: 1rem; }
+.card { position: relative; flex: 1 1 100%; padding: 1.5rem; background: #fff; border: 1px solid #ddd; border-radius: 12px; box-shadow: 0 4px 10px var(--bayangan); transition: transform 0.2s; }
+.card:hover { transform: translateY(-5px); }
+.card i { font-size: 2rem; color: var(--hijau-muda); margin-bottom: 0.5rem; }
+.card h3 { margin-bottom: 0.4rem; }
+.badge { position: absolute; top: -10px; right: -6px; padding: 0.2rem 0.7rem; background: var(--oranye); color: #fff; border-radius: 20px; font-size: 0.8rem; }
+.card::after { content: ""; display: block; width: 40px; height: 3px; margin-top: 0.8rem; background: var(--oranye); }
+
+/* ===== Galeri ===== */
+.gallery { display: grid; grid-template-columns: 1fr; gap: 0.8rem; }
+.gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+
+/* ===== Video / iframe ===== */
+.video-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+.video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+
+/* ===== Katalog (grid areas) ===== */
+.katalog { display: grid; gap: 1.5rem; max-width: 1100px; margin: 0 auto; padding: 2rem 1rem;
+  grid-template-columns: 1fr; grid-template-areas: "intro" "konten" "sidebar"; }
+.intro { grid-area: intro; }
+.konten { grid-area: konten; min-width: 0; }
+.sidebar { grid-area: sidebar; padding: 1rem; background: #fff; border-left: 4px solid var(--oranye); border-radius: 8px; height: fit-content; }
+.intro h1 { color: var(--hijau); }
+.konten h3 { margin: 1rem 0 0.5rem; }
+.sidebar ul, .sidebar ol { margin: 0 0 1rem 1.2rem; }
+.sidebar li:first-child { font-weight: 700; }
+.sidebar li:last-child { color: var(--hijau-muda); }
+
+/* ===== Tabel ===== */
+.table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+table { width: 100%; min-width: 480px; border-collapse: collapse; background: #fff; }
+th, td { padding: 0.7rem; border: 1px solid #ccc; text-align: left; }
+th { background: var(--hijau); color: #fff; }
+tbody tr:nth-child(even) { background: hsl(150, 30%, 93%); }
+
+/* ===== Produk ===== */
+.produk { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.produk img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+figcaption { text-align: center; font-weight: 600; padding-top: 0.3rem; }
+audio, video { width: 100%; }
+
+/* ===== Kontak & Form ===== */
+.info p { margin-bottom: 0.5rem; }
+.info i { width: 1.5rem; color: var(--hijau-muda); }
+form { background: #fff; padding: 1.2rem; border-radius: 10px; box-shadow: 0 4px 10px var(--bayangan); }
+.field { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.3rem; font-weight: 600; }
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], select, textarea { width: 100%; padding: 0.7rem; font: inherit; border: 1px solid #aaa; border-radius: 6px; }
+input:focus, select:focus, textarea:focus { outline: 0; border-color: var(--oranye); box-shadow: 0 0 0 3px rgba(231, 111, 81, 0.3); }
+::placeholder { color: #888; font-style: italic; }
+fieldset { border: 1px solid #ccc; border-radius: 6px; padding: 0.7rem; margin-bottom: 1rem; }
+fieldset label, .check label { display: inline; margin: 0 1rem 0 0.3rem; font-weight: 400; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+
+/* ===== Footer ===== */
+.site-footer { padding: 1.5rem 1rem; text-align: center; background: var(--hijau); color: #fff; }
+.site-footer p { margin: 0; }
+
+/* ===== Responsif: Tablet ===== */
+@media (min-width: 768px) {
+  .hero h1 { font-size: 3rem; }
+  .card { flex: 1 1 calc(33.333% - 1rem); }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery img:first-child { grid-column: span 2; height: 260px; }
+  .produk { grid-template-columns: repeat(3, 1fr); }
+  .katalog { grid-template-columns: 2fr 1fr; grid-template-areas: "intro intro" "konten sidebar"; }
+}
+
+/* ===== Responsif: Desktop ===== */
+@media (min-width: 1024px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .gallery img { height: 240px; }
+  .gallery img:first-child { grid-column: span 2; grid-row: span 2; height: 100%; }
+  .katalog { grid-template-columns: 3fr 1fr; }
+}
